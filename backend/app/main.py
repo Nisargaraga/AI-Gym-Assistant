@@ -16,14 +16,6 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="AI Gym Assistant"
 )
-
-app.include_router(auth_router)
-app.include_router(diet_router)
-app.include_router(workout_router)
-app.include_router(habits_router)
-app.include_router(chatbot_router)
-app.include_router(analytics_router)
-
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
@@ -32,6 +24,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
+
+app.include_router(auth_router)
+app.include_router(diet_router)
+app.include_router(workout_router)
+app.include_router(habits_router)
+app.include_router(chatbot_router)
+app.include_router(analytics_router)
+
+
 
 @app.get("/")
 def home():
