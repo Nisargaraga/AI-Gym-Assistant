@@ -5,6 +5,7 @@ from .routers.habits import router as habits_router
 from .routers.chatbot import router as chatbot_router
 from .routers.analytics import router as analytics_router
 from fastapi.middleware.cors import CORSMiddleware
+from .routers.admin import router as admin_router
 
 from fastapi import FastAPI
 
@@ -31,6 +32,7 @@ app.include_router(workout_router)
 app.include_router(habits_router)
 app.include_router(chatbot_router)
 app.include_router(analytics_router)
+app.include_router(admin_router)
 
 
 

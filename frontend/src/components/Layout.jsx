@@ -7,6 +7,8 @@ import Habits from "./Habits";
 import Analytics from "./Analytics";
 import Chatbot from "./Chatbot";
 import Profile from "./Profile";
+import Admin from "./Admin";
+
 function Layout() {
     const navigate = useNavigate();
     const logout = () => {
@@ -42,8 +44,12 @@ function Layout() {
       case "chatbot":
         return <Chatbot />;
 
+      case "admin":
+        return <Admin />;
+
       default:
         return <Dashboard />;
+        
     }
   };
 
@@ -126,9 +132,15 @@ function Layout() {
   onClick={logout}
 >
   🚪 Logout
-</button>
-        
 
+</button>
+<button
+  onClick={() =>
+    setActive("admin")
+  }
+>
+  🛠 Admin
+</button>
       </div>
 
       <div className="content">
