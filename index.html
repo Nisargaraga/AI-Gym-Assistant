@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AI Gym Assistant</title>
+
+<link
+rel="stylesheet"
+href="css/style.css">
+
+</head>
+
+<body>
+
+<div id="bg-grid"></div>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- LOGIN SCREEN -->
+
+<div id="loginScreen" class="auth-screen">
+
+    <div class="glass-card auth-card">
+
+        <div class="logo-section">
+
+            <div class="logo-circle">
+                ⚡
+            </div>
+
+            <h1>AI Gym Assistant</h1>
+
+            <p>
+                Smart Fitness • AI Coach • Analytics
+            </p>
+
+        </div>
+
+        <div class="tab-container">
+
+            <button
+                id="loginTab"
+                class="tab-btn active">
+
+                Login
+
+            </button>
+
+            <button
+                id="registerTab"
+                class="tab-btn">
+
+                Register
+
+            </button>
+
+        </div>
+
+        <!-- LOGIN -->
+
+        <div id="loginForm">
+
+            <div class="input-group">
+
+                <label>Username</label>
+
+                <input
+id="loginUsername"
+type="text"
+placeholder="Username">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Password</label>
+
+                <input
+id="loginPassword"
+type="password"
+placeholder="Password">
+
+            </div>
+
+            <button
+id="registerBtn"
+class="primary-btn">
+
+    Create Account
+
+</button>
+
+        </div>
+
+        <!-- REGISTER -->
+
+        <div
+        id="registerForm"
+        style="display:none;">
+
+            <div class="input-group">
+
+                <label>Full Name</label>
+
+                <input
+                 id="regName"
+                 type="text"
+                placeholder="Your Name">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Username</label>
+
+                <input
+id="regUsername"
+type="text"
+placeholder="Username">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Password</label>
+
+                <input
+id="regPassword"
+type="password"
+placeholder="Password">
+
+            </div>
+
+            <button
+            class="primary-btn">
+
+                Create Account
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div
+id="dashboard"
+style="display:none;">
+
+    <aside class="sidebar">
+
+        <div>
+
+            <div class="sidebar-logo">
+
+                <div class="sidebar-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <h2>AI Gym</h2>
+
+                    <span>
+                        Fitness OS
+                    </span>
+
+                </div>
+
+            </div>
+
+            <nav class="nav-menu">
+
+                <button data-page="home">
+                    Dashboard
+                </button>
+
+                <button data-page="workouts">
+                    Workouts
+                </button>
+
+                <button data-page="diet">
+                    Dietician AI
+                </button>
+
+                <button data-page="buddy">
+                    Gym Buddy
+                </button>
+
+                <button data-page="habits">
+                    Habits
+                </button>
+
+                <button data-page="analytics">
+                    Analytics
+                </button>
+
+            </nav>
+
+        </div>
+
+        <button
+        id="logoutBtn"
+        class="logout-btn">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+    <main class="main-content">
+
+        <!-- HOME -->
+
+        <section
+        id="home"
+        class="page">
+
+            <div class="hero-card">
+
+                <div>
+
+                    <span class="badge">
+                        AI POWERED
+                    </span>
+
+                    <h1>
+                        Welcome Back
+                    </h1>
+
+                    <p>
+                        Train smarter. Recover better.
+                    </p>
+
+                </div>
+
+                <div class="hero-icon">
+                    🤖
+                </div>
+
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="metric-card">
+
+                    <h4>Calories</h4>
+
+                    <span>1850</span>
+
+                </div>
+
+                <div class="metric-card">
+
+                    <h4>Workouts</h4>
+
+                    <span>12</span>
+
+                </div>
+
+                <div class="metric-card">
+
+                    <h4>Consistency</h4>
+
+                    <span>92%</span>
+
+                </div>
+
+                <div class="metric-card">
+
+                    <h4>Performance</h4>
+
+                    <span>88%</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- WORKOUTS -->
+
+        <section
+        id="workouts"
+        class="page"
+        style="display:none;">
+
+            <h1>Workout Planner</h1>
+
+        </section>
+
+        <!-- DIET -->
+
+        <section
+        id="diet"
+        class="page"
+        style="display:none;">
+
+            <h1>Dietician AI</h1>
+
+        </section>
+
+        <!-- BUDDY -->
+
+        <section
+        id="buddy"
+        class="page"
+        style="display:none;">
+
+            <h1>Gym Buddy</h1>
+
+        </section>
+
+        <!-- HABITS -->
+
+        <section
+        id="habits"
+        class="page"
+        style="display:none;">
+
+            <h1>Habit Predictor</h1>
+
+        </section>
+
+        <!-- ANALYTICS -->
+
+        <section
+        id="analytics"
+        class="page"
+        style="display:none;">
+
+            <h1>Analytics Dashboard</h1>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
